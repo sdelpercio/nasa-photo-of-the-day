@@ -14,7 +14,7 @@ MasonryLayout.defaultProps = {
 function MasonryLayout(props) {
     
     const columnWrapper = {};
-    const result = {};
+    const result = [];
     
     for (let i = 0; i < props.columns; i++) {
         columnWrapper[`column${i}`] = [];

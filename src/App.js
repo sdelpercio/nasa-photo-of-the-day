@@ -22,7 +22,17 @@ function App() {
   return (
     <div className="App">
       <HeaderBar />
-      <MasonryLayout data={data}/>
+      <MasonryLayout columns={3} gap={25}>
+        {
+          [...Array(12).keys()].map(key => {
+            const height = 200 + Math.ceil(Math.random() * 300);
+
+            return (
+              <div style={{height: `${height}px`}} />
+            )
+          })
+        }
+      </MasonryLayout>
     </div>
   );
 }
