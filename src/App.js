@@ -7,22 +7,22 @@ import "./App.css";
 function App() {
   const [data, setData] = useState([]);
 
-  useEffect(() => {
-    axios
-    .get('https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY')
-    .then(res => {
-      console.log(res);
-      setData(res.data);
-    })
-    .catch(err => {
-      console.log(err);
-    })
-  }, []);
+  // useEffect(() => {
+  //   axios
+  //   .get('https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY')
+  //   .then(res => {
+  //     console.log(res);
+  //     setData(res.data);
+  //   })
+  //   .catch(err => {
+  //     console.log(err);
+  //   })
+  // }, []);
 
   return (
     <div className="App">
       <HeaderBar />
-      <MasonryLayout data={data}/>
+      {/* <MasonryLayout data={data}/> */}
     </div>
   );
 }
