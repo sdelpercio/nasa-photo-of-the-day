@@ -9,7 +9,7 @@ function App() {
 
   // useEffect(() => {
   //   axios
-  //   .get('https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY')
+  //   .get('https://api.nasa.gov/planetary/apod?api_key=i1foIZ6W3bEQFHu7fgFJhu4CHaKrcveJxLWYIXmJ&count=7')
   //   .then(res => {
   //     console.log(res);
   //     setData(res.data);
@@ -22,7 +22,7 @@ function App() {
   return (
     <div className="App">
       <HeaderBar />
-      {/* <MasonryLayout data={data}/> */}
+      <MasonryLayout data={data}/>
     </div>
   );
 }
