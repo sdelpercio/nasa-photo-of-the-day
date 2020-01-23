@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
 
 MasonryLayout.propTypes = {
     columns: PropTypes.number.isRequired,
@@ -10,6 +11,12 @@ MasonryLayout.defaultProps = {
     columns: 2,
     gap: 20,
 };
+
+const NasaContainer = styled.div`
+    display: flex;
+    width: 75%;
+    margin: 2rem auto;
+`;
 
 function MasonryLayout(props) {
     
@@ -42,9 +49,9 @@ function MasonryLayout(props) {
     }
 
     return (
-        <div style={{ display: 'flex' }}>
+        <NasaContainer>
             {result}
-        </div>
+        </NasaContainer>
     )
 }
 
