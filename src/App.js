@@ -4,13 +4,14 @@ import HeaderBar from './components/HeaderBar/HeaderBar.js';
 import MasonryLayout from './components/MasonryLayout/MasonryLayout.js';
 import "./App.css";
 import styled from 'styled-components';
+import swal from '@sweetalert/with-react';
+
 
 const NasaImage = styled.img`
   width: 100%;
   border-radius: 5px;
   box-shadow: 10px 10px 20px -6px rgba(0,0,0,0.8);
 `;
-
 
 function App() {
   const [data, setData] = useState([]);
@@ -41,7 +42,22 @@ function App() {
               )
             }
             return (
-              <NasaImage className='MasonryImg' style={{height: `${height}px`}} src={data[key].url} alt={data[key].title}/>
+              <NasaImage 
+                className='MasonryImg' 
+                key={data[key].date}
+                style={{height: `${height}px`}} 
+                src={data[key].url} 
+                alt={data[key].title}
+                onClick={ () => {
+                  swal(
+                    <div>
+                      <h1>{data[key].title}</h1>
+                      <p>
+                        {data[key].explanation}
+                      </p>
+                    </div>
+                  )
+                }}/>
             )
             
           })
