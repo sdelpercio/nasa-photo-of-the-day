@@ -11,6 +11,9 @@ const NasaImage = styled.img`
   width: 100%;
   border-radius: 5px;
   box-shadow: 10px 10px 20px -6px rgba(0,0,0,0.8);
+  &:hover {
+    cursor: pointer;
+  }
 `;
 
 function App() {
